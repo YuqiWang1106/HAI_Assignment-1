@@ -15,6 +15,10 @@ app.add_middleware(
 class Message(BaseModel):
     message: str
 
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
 @app.post("/message")
 async def reply_message(message: Message):
     return {"reply": "I'm a simple robot. I don't have real responses yet!"}
