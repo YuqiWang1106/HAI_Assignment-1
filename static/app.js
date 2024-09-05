@@ -34,13 +34,13 @@ function sendMessage() {
                         </div>
                     </div>
                     <div class='imageContainer'>
-                        <img src="src/user_avator.png" alt="userImage"> 
+                        <img src="static/user_avator.png" alt="userImage"> 
                     </div>                     
                 </div>                  
             </div>
             `;
     // Send it to the server
-    fetch("http://127.0.0.1:8000/message", {
+    fetch("https://hai-assignment-1-1.onrender.com/message", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: userMessage }),
@@ -55,7 +55,7 @@ function sendMessage() {
                 </div>
                 <div class='ai-flex-container'>
                     <div class='aiImageContainer'>
-                        <img src="src/ai_avator.png" alt="aiImage"> 
+                        <img src="static/ai_avator.png" alt="aiImage"> 
                     </div>    
                     <div class='ai-flex-container aiMessageContainer'>
                         <div class=' messageText'>${data.reply}</div>
